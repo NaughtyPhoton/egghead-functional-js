@@ -75,3 +75,13 @@ class ImmutableGlass {
 const ig1 = new ImmutableGlass('water', 100);
 const ig2 = ig1.takeDrink(31);
 console.log(ig1, ig2, ig1 === ig2);
+
+/**
+ * Pure vs. Impure Functions
+ */
+
+// Impure because it does not derive output solely from inputs
+const COST_OF_ITEM = 19;
+const cartTotal = quantity => COST_OF_ITEM * quantity;
+console.log(cartTotal(2));
+console.log(cartTotal(2));
